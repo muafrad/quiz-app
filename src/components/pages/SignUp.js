@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Button from '../Button';
 import Checkbox from '../Checkbox';
 import Form from '../Form';
@@ -20,7 +21,7 @@ const SignUp = () => {
                     <Checkbox text='I agree to the Terms &amp; Conditions' />
                     <Button>Submit Now</Button>
                     <div class="info">
-                        Already have an account? <a href="login.html">Login</a> instead.
+                        Already have an account? <Link to="/login">Login</Link> instead.
                     </div>
                 </Form>
             </div>

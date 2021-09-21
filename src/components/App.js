@@ -1,20 +1,41 @@
+import {
+  BrowserRouter as Router, Route, Switch
+} from "react-router-dom";
 import Layout from './Layout';
+import Home from './pages/Home';
+import LogIn from './pages/LogIn';
+import Quiz from './pages/Quiz';
 import Result from './pages/Result';
-// import Quiz from './pages/Quiz';
-// import LogIn from './pages/LogIn';
-// import SignUp from './pages/SignUp';
-// import Home from './pages/Home';
+import SignUp from './pages/SignUp';
 import './styles/App.css';
 
 function App() {
   return (
-    <Layout>
-      <Result />
-      {/* <Quiz /> */}
-      {/* <LogIn /> */}
-      {/* <SignUp /> */}
-      {/* <Home /> */}
-    </Layout>
+    <Router>
+      <Layout>
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route path="/home">
+            <Home />
+          </Route>
+          <Route path="/signup">
+            <SignUp />
+          </Route>
+          <Route path="/login">
+            <LogIn />
+          </Route>
+          <Route path="/result">
+            <Result />
+          </Route>
+          <Route path="/quiz">
+            <Quiz />
+          </Route>
+        </Switch>
+      </Layout>
+    </Router>
+
   );
 }
 
