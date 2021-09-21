@@ -1,10 +1,10 @@
 import React from 'react';
-import Button from './Button';
-import Checkbox from './Checkbox';
-import Form from './Form';
-import Illustration from './Illustration';
-import classes from './styles/SignUp.module.css';
-import TextInput from './TextInput';
+import Button from '../Button';
+import Checkbox from '../Checkbox';
+import Form from '../Form';
+import Illustration from '../Illustration';
+import classes from '../styles/SignUp.module.css';
+import TextInput from '../TextInput';
 
 const SignUp = () => {
     return (
