@@ -1,6 +1,7 @@
 import {
   BrowserRouter as Router, Route, Switch
 } from "react-router-dom";
+import { AuthProvider } from '../contexts/AuthContext';
 import Layout from './Layout';
 import Home from './pages/Home';
 import LogIn from './pages/LogIn';
@@ -12,28 +13,30 @@ import './styles/App.css';
 function App() {
   return (
     <Router>
-      <Layout>
-        <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
-          <Route path="/home">
-            <Home />
-          </Route>
-          <Route path="/signup">
-            <SignUp />
-          </Route>
-          <Route path="/login">
-            <LogIn />
-          </Route>
-          <Route path="/result">
-            <Result />
-          </Route>
-          <Route path="/quiz">
-            <Quiz />
-          </Route>
-        </Switch>
-      </Layout>
+      <AuthProvider>
+        <Layout>
+          <Switch>
+            <Route exact path="/">
+              <Home />
+            </Route>
+            <Route path="/home">
+              <Home />
+            </Route>
+            <Route path="/signup">
+              <SignUp />
+            </Route>
+            <Route path="/login">
+              <LogIn />
+            </Route>
+            <Route path="/result">
+              <Result />
+            </Route>
+            <Route path="/quiz">
+              <Quiz />
+            </Route>
+          </Switch>
+        </Layout>
+      </AuthProvider>
     </Router>
 
   );
