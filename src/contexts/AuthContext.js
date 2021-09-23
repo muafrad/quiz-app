@@ -22,12 +22,12 @@ const AuthProvider = ({ children }) => {
     }, []);
 
     //signup function
-    function signup(email, password, username) {
+    async function signup(email, password, username) {
         const auth = getAuth();
-        createUserWithEmailAndPassword(auth, email, password)
+        await createUserWithEmailAndPassword(auth, email, password)
 
         //update profile
-        updateProfile(auth.currentUser, {
+        await updateProfile(auth.currentUser, {
             displayName: username,
         })
         const user = auth.currentUser;
@@ -40,13 +40,13 @@ const AuthProvider = ({ children }) => {
     function login(email, password) {
         const auth = getAuth();
         // return
-        signInWithEmailAndPassword(auth, email, password)
+        return signInWithEmailAndPassword(auth, email, password)
     }
 
     //logout function
     function logout() {
         const auth = getAuth();
-        signOut(auth)
+        return signOut(auth)
     }
 
     const value = {

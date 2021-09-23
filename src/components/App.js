@@ -1,7 +1,7 @@
 import {
   BrowserRouter as Router, Route, Switch
 } from "react-router-dom";
-import { AuthProvider } from '../contexts/AuthContext';
+import AuthProvider from '../contexts/AuthContext';
 import Layout from './Layout';
 import Home from './pages/Home';
 import LogIn from './pages/LogIn';
@@ -12,8 +12,8 @@ import './styles/App.css';
 
 function App() {
   return (
-    <Router>
-      <AuthProvider>
+    <AuthProvider>
+      <Router>
         <Layout>
           <Switch>
             <Route exact path="/">
@@ -36,8 +36,8 @@ function App() {
             </Route>
           </Switch>
         </Layout>
-      </AuthProvider>
-    </Router>
+      </Router>
+    </AuthProvider>
 
   );
 }
