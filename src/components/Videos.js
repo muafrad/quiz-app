@@ -14,15 +14,20 @@ const Videos = () => {
             </Link>
             <Link to="/quiz">
                 <Video />
-            </Link><Link to="/quiz">
+            </Link>
+            <Link to="/quiz">
                 <Video />
-            </Link><Link to="/quiz">
+            </Link>
+            <Link to="/quiz">
                 <Video />
-            </Link><Link to="/quiz">
+            </Link>
+            <Link to="/quiz">
                 <Video />
-            </Link><Link to="/quiz">
+            </Link>
+            <Link to="/quiz">
                 <Video />
-            </Link><Link to="/quiz">
+            </Link>
+            <Link to="/quiz">
                 <Video />
             </Link>
         </div>

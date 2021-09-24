@@ -8,6 +8,8 @@ import LogIn from './pages/LogIn';
 import Quiz from './pages/Quiz';
 import Result from './pages/Result';
 import SignUp from './pages/SignUp';
+import PrivateRoute from './PrivateRoute';
+import PublicRoute from './PublicRoute';
 import './styles/App.css';
 
 function App() {
@@ -22,18 +24,18 @@ function App() {
             <Route path="/home">
               <Home />
             </Route>
-            <Route path="/signup">
+            <PublicRoute path="/signup">
               <SignUp />
-            </Route>
-            <Route path="/login">
+            </PublicRoute>
+            <PublicRoute path="/login">
               <LogIn />
-            </Route>
-            <Route path="/result">
-              <Result />
-            </Route>
-            <Route path="/quiz">
+            </PublicRoute>
+            <PrivateRoute path="/quiz">
               <Quiz />
-            </Route>
+            </PrivateRoute>
+            <PrivateRoute path="/result">
+              <Result />
+            </PrivateRoute>
           </Switch>
         </Layout>
       </Router>
